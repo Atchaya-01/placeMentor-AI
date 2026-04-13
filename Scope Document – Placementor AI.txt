@@ -1,0 +1,209 @@
+Scope Document – Placementor AI
+Project Title
+
+Placementor AI – AI-Based Placement Prediction and Career Guidance System
+
+1. Introduction
+
+Placementor AI is a web-based intelligent placement assistance system designed to help students analyze their placement readiness and receive career guidance based on their academic and skill-related data.
+
+The system collects student details through an interactive web form, stores the data in a structured database, and provides visual insights using dashboards. Additionally, AI-based recommendations are integrated to guide students toward suitable career paths and improvements.
+
+The project aims to bridge the gap between student performance and placement readiness by providing meaningful predictions and analytics.
+
+2. Purpose of the Project
+
+The primary purpose of Placementor AI is to:
+
+Predict placement readiness of students
+Analyze academic and skill performance
+Provide AI-based suggestions
+Display placement insights using dashboards
+Help students improve their placement chances
+Assist institutions in tracking placement trends
+
+This system enables data-driven decision-making for both students and placement coordinators.
+
+3. Scope of the System
+
+The scope of Placementor AI includes the following functional components based on the work implemented:
+
+3.1 Student Data Collection Module
+
+This module collects student information through a web-based form.
+
+Features implemented:
+
+Student registration form
+Input fields for:
+Student Name
+Student ID
+Department
+CGPA
+Skills
+Internships
+Projects
+Certifications
+Placement Status
+Form validation using HTML/CSS
+Data submission to backend
+
+Technology Used:
+
+HTML
+CSS
+Flask (Python)
+3.2 Database Management Module
+
+All submitted student data is stored in a structured relational database.
+
+Features implemented:
+
+MySQL database integration
+Table creation for student records
+Dynamic insertion of new records
+Automatic update of dataset when form is submitted
+Unique Student ID handling
+
+Technology Used:
+
+MySQL
+SQL Queries
+Python (Flask backend)
+3.3 Placement Prediction Engine (AI Module)
+
+This module analyzes student data and predicts placement readiness.
+
+Scope includes:
+
+Processing student academic and skill data
+Generating placement prediction output
+Providing improvement suggestions
+Backend AI logic using Python
+
+Technology Used:
+
+Python
+Machine Learning logic
+Flask
+3.4 Data Visualization Dashboard (Power BI Integration)
+
+The system includes a dashboard that visualizes placement-related insights.
+
+Features implemented:
+
+Power BI dashboard creation
+Dashboard integration into website
+Visualization of:
+Placement Status Distribution
+Department-wise placement trends
+Skill-based analysis
+Student performance insights
+
+Dashboard Type:
+
+Static embedded dashboard (Power BI Service)
+
+Technology Used:
+
+Power BI
+Web embedding
+3.5 AI Chatbot Integration Module
+
+An AI-based chatbot is planned to assist students in career-related queries.
+
+Scope includes:
+
+Chat interface on website
+AI-based career suggestions
+Resume and skill recommendations
+Guidance for improving placement readiness
+
+Technology Used:
+
+Python
+AI chatbot logic
+Web interface integration
+3.6 Web Interface Module
+
+The entire system is accessible through a user-friendly web interface.
+
+Features implemented:
+
+Homepage design
+Student form page
+Dashboard page
+Styling using CSS
+Responsive UI structure
+
+Technology Used:
+
+HTML
+CSS
+Flask
+4. In-Scope Features
+
+The following features are included within the project scope:
+
+Student data entry via web form
+Backend data processing
+Database storage
+Placement prediction logic
+Power BI dashboard visualization
+Dashboard embedding in website
+AI chatbot integration (basic guidance)
+Web-based interface
+5. Out-of-Scope Features
+
+The following features are not included in the current implementation but may be added in future versions:
+
+Real-time dashboard refresh
+Multi-user authentication system
+Resume upload analysis
+Advanced NLP chatbot
+Mobile application version
+Company-wise recruitment matching
+Automated resume scoring
+6. Target Users
+
+Placementor AI is designed for:
+
+Students preparing for placements
+College placement coordinators
+Training and placement officers
+Academic institutions
+7. Technology Stack
+
+Based on your actual work:
+
+Component	Technology Used
+Frontend	HTML, CSS
+Backend	Python (Flask)
+Database	MySQL
+Dashboard	Power BI
+AI Engine	Python
+Chatbot	AI-based logic
+Deployment	Web-based system
+8. Expected Outcomes
+
+The system is expected to:
+
+Provide placement readiness predictions
+Store student placement data efficiently
+Generate meaningful visual insights
+Help students identify improvement areas
+Assist institutions in analyzing placement trends
+9. Future Scope
+
+Placementor AI can be extended with advanced capabilities such as:
+
+Real-time dynamic dashboards
+Resume analysis using AI
+Interview preparation modules
+Company-specific job matching
+Personalized learning recommendations
+Mobile application version
+Integration with LinkedIn and job portals
+10. Conclusion
+
+Placementor AI provides a smart and scalable solution for analyzing student placement readiness through AI-driven predictions and data visualization. By integrating web technologies, database systems, and business intelligence tools, the project demonstrates a practical application of data-driven decision-making in placement management systems.

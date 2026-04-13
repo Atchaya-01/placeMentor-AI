@@ -1,0 +1,145 @@
+body {
+
+font-family: Arial;
+
+background-color: #2f4f8f;
+
+margin: 0;
+
+padding: 0;
+
+}
+
+/* Main Box */
+
+.container {
+
+width: 400px;
+
+margin: 50px auto;
+
+background: white;
+
+padding: 20px;
+
+border-radius: 12px;
+
+text-align: center;
+
+}
+
+button {
+
+background-color: #2f4f8f;
+
+color: white;
+
+border: none;
+
+padding: 10px 15px;
+
+border-radius: 8px;
+
+cursor: pointer;
+
+margin-top: 10px;
+
+}
+
+button:hover {
+
+background-color: #1d3470;
+
+}
+
+.result-box {
+
+margin-top: 20px;
+
+background: #e9eef7;
+
+padding: 15px;
+
+border-radius: 10px;
+
+}
+
+/* Chatbot */
+
+.chatbot {
+
+position: fixed;
+
+bottom: 20px;
+
+right: 20px;
+
+width: 320px;
+
+background: white;
+
+border-radius: 12px;
+
+padding: 10px;
+
+box-shadow: 0 0 15px rgba(0,0,0,0.3);
+
+z-index: 999;
+
+}
+
+/* Chat Messages */
+
+#chatbox {
+
+height: 220px;
+
+overflow-y: auto;
+
+background: #f5f5f5;
+
+padding: 8px;
+
+border-radius: 8px;
+
+margin-bottom: 8px;
+
+font-size: 14px;
+
+}
+
+/* Input */
+
+#userInput {
+
+width: 100%;
+
+padding: 8px;
+
+margin-bottom: 5px;
+
+border-radius: 6px;
+
+border: 1px solid #ccc;
+
+}
+
+/* Send Button */
+
+.chatbot button {
+
+width: 100%;
+
+padding: 8px;
+
+background-color: #2f4f8f;
+
+color: white;
+
+border: none;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+}

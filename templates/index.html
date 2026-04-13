@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>PlaceMentor AI - Smart Placement Guidance</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    margin: 0;
+    padding: 0;
+}
+
+/* Form Container */
+
+.container {
+    width: 420px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+/* Titles */
+
+h1 {
+    text-align: center;
+    color: #1e3c72;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Inputs */
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 18px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1e3c72;
+}
+
+/* Result Box */
+
+.result-box {
+    margin-top: 20px;
+    padding: 12px;
+    background: #e8f0ff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Dashboard Button */
+
+.dashboard-button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.dashboard-button a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.dashboard-button a:hover {
+    background: #1e3c72;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>PlaceMentor AI</h1>
+<h2>Smart Placement Guidance</h2>
+
+<form method="POST">
+
+<label>CGPA:</label> <input type="number"
+    name="cgpa"
+    step="0.01"
+    min="0"
+    max="10"
+    required>
+
+<label>Internships:</label> <input type="number"
+    name="internships"
+    min="0"
+    required>
+
+<label>Projects:</label> <input type="number"
+    name="projects"
+    min="0"
+    required>
+
+<label>Coding Level:</label> <select name="coding_level" required>
+
+<option value="Beginner">Beginner</option>
+<option value="Intermediate">Intermediate</option>
+<option value="Advanced">Advanced</option>
+</select>
+
+<label>Communication Level:</label> <select name="communication_level" required>
+
+<option value="Poor">Poor</option>
+<option value="Average">Average</option>
+<option value="Good">Good</option>
+</select>
+
+<label>Backlogs:</label> <input type="number"
+    name="backlogs"
+    min="0"
+    required>
+
+<button type="submit">
+Get Recommendation
+</button>
+
+</form>
+
+{% if score is defined %}
+
+<div class="result-box">
+
+<h3>Placement Score: {{ score }}</h3>
+
+<h3>Status: {{ status }}</h3>
+
+</div>
+
+{% endif %}
+
+<!-- Dashboard Button -->
+
+<div class="dashboard-button">
+
+<a href="https://app.powerbi.com/links/rtdpZrS9ir?ctid=562673cb-3a12-4428-9c2e-82d74fd5889a&pbi_source=linkShare"
+target="_blank">
+
+View Full Placement Dashboard
+
+</a>
+
+</div>
+
+</div>
+<div class="chatbot">
+
+<h3>Placementor AI Assistant</h3>
+
+<div id="chatbox"></div>
+
+<input type="text"
+       id="userInput"
+       placeholder="Ask placement questions...">
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+</div>
+
+<script>
+
+async function sendMessage() {
+
+let input =
+document.getElementById("userInput").value;
+
+let chatbox =
+document.getElementById("chatbox");
+
+chatbox.innerHTML +=
+"<p><b>You:</b> " + input + "</p>";
+
+const response =
+await fetch("/chatbot", {
+
+method: "POST",
+
+headers: {
+"Content-Type": "application/json"
+},
+
+body: JSON.stringify({
+message: input
+})
+
+});
+
+const data =
+await response.json();
+
+chatbox.innerHTML +=
+"<p><b>Bot:</b> " + data.reply + "</p>";
+
+document.getElementById("userInput").value = "";
+
+}
+
+</script>
+</body>
+
+</html>
